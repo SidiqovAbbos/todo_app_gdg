@@ -9,6 +9,7 @@ class MyToDoApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'To Do App',
+      debugShowCheckedModeBanner: false,
       theme: ThemeData(
         colorScheme: ColorScheme.fromSeed(
           seedColor: const Color.fromRGBO(103, 58, 183, 1),

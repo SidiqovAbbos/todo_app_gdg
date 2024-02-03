@@ -13,13 +13,14 @@ class StatisticsPage extends StatelessWidget {
         title: const Text('Statistics'),
       ),
       body: Padding(
-        padding: const EdgeInsets.all(8.0),
+        padding: const EdgeInsets.all(22),
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             CardStaticsWidget(
               iconData: Icons.format_align_left_sharp,
               number: items.length,
+              iconColor: Theme.of(context).colorScheme.primary,
             ),
             const SizedBox(height: 12),
             Row(
@@ -28,7 +29,7 @@ class StatisticsPage extends StatelessWidget {
                   child: CardStaticsWidget(
                     iconData: Icons.clear,
                     number: items.where((e) => !e.done).length,
-                    iconColor: Colors.red,
+                    iconColor: Colors.orange,
                   ),
                 ),
                 Expanded(

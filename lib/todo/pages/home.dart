@@ -13,8 +13,9 @@ class HomePape extends StatefulWidget {
 }
 
 class _HomePapeState extends State<HomePape> {
-  late final List<ToDoItem> items = dummyItems;
+  final List<ToDoItem> items = dummyItems;
   ToDoFilter currentFilter = ToDoFilter.All;
+
   List<ToDoItem> get filteredItems => switch (currentFilter) {
         ToDoFilter.Active => items.where((e) => !e.done).toList(),
         ToDoFilter.Completed => items.where((e) => e.done).toList(),

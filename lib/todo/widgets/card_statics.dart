@@ -17,7 +17,6 @@ class CardStaticsWidget extends StatelessWidget {
       child: Padding(
         padding: const EdgeInsets.all(16),
         child: Row(
-          mainAxisAlignment: MainAxisAlignment.center,
           children: [
             ClipOval(
               child: ColoredBox(
@@ -26,17 +25,20 @@ class CardStaticsWidget extends StatelessWidget {
                   padding: const EdgeInsets.all(8.0),
                   child: Icon(
                     iconData,
-                    size: 32,
+                    size: 22,
                     color: Colors.white,
                   ),
                 ),
               ),
             ),
-            const SizedBox(width: 26),
-            Text(
-              number.toString(),
-              style: Theme.of(context).textTheme.displayMedium,
-            ),
+            Expanded(
+              child: Center(
+                child: Text(
+                  number.toString(),
+                  style: Theme.of(context).textTheme.displayMedium,
+                ),
+              ),
+            )
           ],
         ),
       ),
