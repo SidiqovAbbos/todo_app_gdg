@@ -1,16 +1,37 @@
-# todo_app_gdg
+# To Do List
 
-A new Flutter project.
+Simle To Do List using Flutter framework
+
+# Screenshots
+
+- Home ![Home](./screenshots/home_page.png)
+- Statistics ![Statistics](./screenshots/statistics.png)
 
 ## Getting Started
 
-This project is a starting point for a Flutter application.
+Open Terminal
+- `
+git clone https://github.com/SidiqovAbbos/todo_app_gdg.git
+`
+- `cd todo_app-gdg`
+- `flutter pud get`
+- `flutter run`
+
+
+
+# Q/A
+
+- How to install Flutter?
+  - https://flutter-ko.dev/get-started/install
+- I have a problem on running the app.
+  - Run `flutter doctor`, and check what was the wrong.
+
+
+Create an issue, If you find any BUG 🪲
+
+## Useful information
 
 A few resources to get you started if this is your first Flutter project:
 
 - [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
 - [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.

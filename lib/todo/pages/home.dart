@@ -29,12 +29,12 @@ class _HomePapeState extends State<HomePape> {
         title: const Text('To Do List 📝'),
         centerTitle: false,
         actions: [
-          PopupMenuButton<ToDoFilter>(
+          PopupMenuButton(
             icon: const Icon(Icons.filter_list),
             itemBuilder: (BuildContext context) {
               return ToDoFilter.values.map(
                 (ToDoFilter choice) {
-                  return PopupMenuItem<ToDoFilter>(
+                  return PopupMenuItem(
                     value: choice,
                     child: Text(
                       choice.name,
