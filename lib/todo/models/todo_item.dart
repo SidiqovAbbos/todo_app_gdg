@@ -7,8 +7,8 @@ class ToDoItem {
 
   const ToDoItem({
     required this.title,
-    this.done = false,
     this.description,
+    this.done = false,
   });
 }
 

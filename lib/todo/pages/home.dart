@@ -13,13 +13,13 @@ class HomePape extends StatefulWidget {
 }
 
 class _HomePapeState extends State<HomePape> {
-  final List<ToDoItem> items = dummyItems;
+  final List<ToDoItem> itemSource = dummyItems;
   ToDoFilter currentFilter = ToDoFilter.All;
 
   List<ToDoItem> get filteredItems => switch (currentFilter) {
-        ToDoFilter.Active => items.where((e) => !e.done).toList(),
-        ToDoFilter.Completed => items.where((e) => e.done).toList(),
-        _ => List.of(items),
+        ToDoFilter.Active => itemSource.where((e) => !e.done).toList(),
+        ToDoFilter.Completed => itemSource.where((e) => e.done).toList(),
+        _ => List.of(itemSource),
       };
 
   @override
@@ -31,7 +31,6 @@ class _HomePapeState extends State<HomePape> {
         actions: [
           PopupMenuButton<ToDoFilter>(
             icon: const Icon(Icons.filter_list),
-            onSelected: (str) {},
             itemBuilder: (BuildContext context) {
               return ToDoFilter.values.map(
                 (ToDoFilter choice) {
@@ -59,7 +58,7 @@ class _HomePapeState extends State<HomePape> {
               onPressed: () {
                 Navigator.of(context).push(
                   MaterialPageRoute(
-                    builder: (ctx) => StatisticsPage(items),
+                    builder: (ctx) => StatisticsPage(itemSource),
                   ),
                 );
               },
@@ -70,8 +69,8 @@ class _HomePapeState extends State<HomePape> {
         filteredItems,
         onChecked: (ToDoItem item, bool checked) {
           setState(() {
-            final index = items.indexOf(item);
-            items[index] = ToDoItem(
+            final index = itemSource.indexOf(item);
+            itemSource[index] = ToDoItem(
                 title: item.title,
                 description: item.description,
                 done: checked);
@@ -80,13 +79,14 @@ class _HomePapeState extends State<HomePape> {
       ),
       floatingActionButton: FloatingActionButton(
         onPressed: () async {
-          final result = await showDialog<ToDoItem?>(
+          final newItem = await showDialog<ToDoItem?>(
             context: context,
             builder: (ctc) => const AddDialogWidget(),
           );
-          if (result != null) {
+
+          if (newItem != null) {
             setState(() {
-              items.add(result);
+              itemSource.add(newItem);
             });
           }
         },

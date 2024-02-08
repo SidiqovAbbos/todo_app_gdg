@@ -4,7 +4,6 @@ import 'package:todo_app_gdg/todo/pages/home.dart';
 class MyToDoApp extends StatelessWidget {
   const MyToDoApp({super.key});
 
-  // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
