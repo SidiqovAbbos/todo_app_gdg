@@ -4,8 +4,8 @@ Simle To Do List using Flutter framework
 
 # Screenshots
 
-- Home ![Home](./screenshots/home_page.png)
-- Statistics ![Statistics](./screenshots/statistics.png)
+- ![Home](./screenshots/home_page.png)
+- ![Statistics](./screenshots/statistics.png)
 
 ## Getting Started
 
