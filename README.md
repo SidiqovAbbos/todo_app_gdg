@@ -17,8 +17,6 @@ git clone https://github.com/SidiqovAbbos/todo_app_gdg.git
 - `flutter pud get`
 - `flutter run`
 
-
-
 # Q/A
 
 - How to install Flutter?
